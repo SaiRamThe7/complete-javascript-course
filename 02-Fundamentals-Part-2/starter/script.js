@@ -91,7 +91,7 @@ console.log(address);
 console.log(`The Door Number for the Gven Address is ` +address[0]);
 
 
-//Adding an Element 
+//-------------------Adding an Element-------------------------//
 //This will be added as extra fruit
 const newLength = fruits.push('Dragon Fruit');
 console.log(fruits);
@@ -102,16 +102,20 @@ console.log(newLength);
 fruits.unshift('Banana 🍌');
 console.log(fruits);
 
-//Removal of Element 
+//------------------Removal of Element-------------------------//
 
 //Removing the last element
 fruits.pop();
 console.log(fruits);
+//Dragon Frit will be removed
 
 
 //Removing the first element
 fruits.shift();
 console.log(fruits);
+//Banana will be removed 
+
+
 
 
 
