@@ -226,6 +226,10 @@ console.log(friends);
 friends.shift(); // First
 console.log(friends);
 
+
+-----until here its completed
+
+
 console.log(friends.indexOf('Steven'));
 console.log(friends.indexOf('Bob'));
 

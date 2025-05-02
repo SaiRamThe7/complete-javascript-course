@@ -57,7 +57,7 @@ const fruit2 = 'JackFruit';
 const fruit3 = 'Guava';
 const fruit4 = 'Orange';
 
-const fruits = ['Mango','JackFruit','Guava','Grapes'];
+const fruits = ['Mango - 🥭','JackFruit','Guava ','Grapes - 🍇'];
 console.log(fruits);
 
 console.log(fruits[0]);
@@ -67,7 +67,13 @@ console.log(fruits[3]);
 console.log(fruits.length);
 console.log(fruits[fruits.length - 1]);
 
-fruits[1] = 'Apple';
+
+//This adds apple at the inplace of array length 1 that is Jackfruit
+fruits[1] = 'Apple - 🍏';
+console.log(fruits);
+
+//Example 2 :
+fruits[3] = 'Pineapple - 🍍';
 console.log(fruits);
 
 
@@ -84,5 +90,30 @@ console.log(address);
 
 console.log(`The Door Number for the Gven Address is ` +address[0]);
 
+
+//Adding an Element 
+//This will be added as extra fruit
 const newLength = fruits.push('Dragon Fruit');
+console.log(fruits);
+console.log(newLength);
+
+
+//unshift will beused to add the Element at first 
+fruits.unshift('Banana 🍌');
+console.log(fruits);
+
+//Removal of Element 
+
+//Removing the last element
+fruits.pop();
+console.log(fruits);
+
+
+//Removing the first element
+fruits.shift();
+console.log(fruits);
+
+
+
+
 
