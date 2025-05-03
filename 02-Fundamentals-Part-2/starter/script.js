@@ -119,5 +119,3 @@ console.log(fruits);
 
 
 
-
-
