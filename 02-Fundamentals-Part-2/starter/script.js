@@ -24,25 +24,24 @@ HINT: To check if number A is at least double number B, check for A >= 2 * B. Ap
 GOOD LUCK 😀
 */
 
-const calcAverage = (a,b,c) => (a+b+c)/3 ;
+const calcAverage = (a, b, c) => (a + b + c) / 3;
 //console.log(calcAverage(5,6,8));
 
 let scoreDolphins = calcAverage(44, 23, 71);
 let scoreKoalas = calcAverage(65, 54, 49);
 
 const checkWinner = function (avgDolphins, avgKoalas) {
-    if (avgDolphins >= 2 * avgKoalas) {
-      console.log(`Dolphins win 🏆 the Game(${avgDolphins} vs. ${avgKoalas})`);
-    } else if (avgKoalas >= 2 * avgDolphins) {
-      console.log(`Koalas win 🏆 the Game (${avgKoalas} vs. ${avgDolphins})`);
-    } else {
-      console.log('No team wins...');
-    }
+  if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win 🏆 the Game(${avgDolphins} vs. ${avgKoalas})`);
+  } else if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win 🏆 the Game (${avgKoalas} vs. ${avgDolphins})`);
+  } else {
+    console.log('No team wins...');
   }
+}
 
 
-  checkWinner(scoreDolphins, scoreKoalas);
-
+checkWinner(scoreDolphins, scoreKoalas);
 
 // Test 2
 scoreDolphins = calcAverage(85, 54, 41);
@@ -52,12 +51,14 @@ checkWinner(scoreDolphins, scoreKoalas);
 
 //Arrays 
 
+console.log('Arrys will start from here');
+
 const fruit1 = 'Mango';
 const fruit2 = 'JackFruit';
 const fruit3 = 'Guava';
 const fruit4 = 'Orange';
 
-const fruits = ['Mango - 🥭','JackFruit','Guava ','Grapes - 🍇'];
+const fruits = ['Mango - 🥭', 'JackFruit', 'Guava', 'Grapes - 🍇'];
 console.log(fruits);
 
 console.log(fruits[0]);
@@ -67,6 +68,14 @@ console.log(fruits[3]);
 console.log(fruits.length);
 console.log(fruits[fruits.length - 1]);
 
+//push is a function add the fruit at last
+
+//this function also returns the length and we can store the lenth a new variable
+
+var fruitsLength = fruits.push('chickoo');
+
+console.log(fruits);
+console.log(fruitsLength);
 
 //This adds apple at the inplace of array length 1 that is Jackfruit
 fruits[1] = 'Apple - 🍏';
@@ -85,37 +94,67 @@ var distirict = 'Tirupati';
 var pinCode = '517507';
 var state = 'Andhra Pradesh';
 
-const address = [doorNum,streetName,villageName,locality,distirict,pinCode,state];
+const address = [doorNum, streetName, villageName, locality, distirict, pinCode, state];
 console.log(address);
 
-console.log(`The Door Number for the Gven Address is ` +address[0]);
+console.log(`The Door Number for the Gven Address is ` + address[0]);
 
 
-//-------------------Adding an Element-------------------------//
+//-------------------Adding an Elements-------------------------//
 //This will be added as extra fruit
 const newLength = fruits.push('Dragon Fruit');
 console.log(fruits);
 console.log(newLength);
 
 
-//unshift will beused to add the Element at first 
+//unshift will be used to add at first  Element
 fruits.unshift('Banana 🍌');
-console.log(fruits);
+console.log(fruits);  //also returns th elength of array 
 
-//------------------Removal of Element-------------------------//
+//------------------Removal of Elements-------------------------//
 
 //Removing the last element
-fruits.pop();
-console.log(fruits);
+var removed = fruits.pop();
+console.log(fruits); //pop can't return the length but it can return the removed element
+
+console.log(removed);
 //Dragon Frit will be removed
 
 
 //Removing the first element
 fruits.shift();
 console.log(fruits);
-//Banana will be removed 
+//Banana will be removed
 
+console.log(fruits.indexOf('chickoo')); //Retuns the number of element
+console.log(fruits.includes('Guava')); //is it included or not - true or flase
+console.log(fruits.includes('Tomato'));
 
+if (fruits.includes('Tomato')) {
+  console.log(`The Tomato ius included in the list`)
+}
+else {
+  console.log(`The Tomato is not included in the list`)
+}
 
+// ---- The Array
 
+//Challenge 
+
+function clacTip(bill) {
+  let tip;
+  if (bill >= 50 || bill <= 300) {
+    tip = bill / 100 * 15
+  } else {
+    tip = bill / 100 * 20
+  }
+  return tip
+}
+
+const bills = [125, 555, 44];
+const tips = clacTip.bills();
+
+console.log(tips);
+
+console.log(`The Tip amount for the bill is = ` + clacTip(51));
 
