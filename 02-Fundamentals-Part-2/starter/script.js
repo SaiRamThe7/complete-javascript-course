@@ -141,20 +141,93 @@ else {
 
 //Challenge 
 
+
+/*
 function clacTip(bill) {
   let tip;
   if (bill >= 50 || bill <= 300) {
-    tip = bill / 100 * 15
+    tip = bill * 0.15
   } else {
-    tip = bill / 100 * 20
+    tip = bill * 0.20
   }
   return tip
 }
+*/
+
+const calcTip = function (bill) {
+  return bill >= 50 || bill <= 300 ? bill * 0.15 : bill * 0.20
+}
 
 const bills = [125, 555, 44];
-const tips = clacTip.bills();
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
 console.log(tips);
 
-console.log(`The Tip amount for the bill is = ` + clacTip(51));
+console.log(`The Tips amount for the bill is = ` + calcTip(51));
 
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+
+console.log(`The Total Amount for the Bills is ` + total);
+
+//**********************introduction to Objects*****************************
+
+// const saiArray = [
+//   'sairam',
+//   'kaligiri',
+//   2025 - 2000,
+//   'Developer',
+//   ['chaitu', 'sai kumar', 'sathish', 'vinod']
+// ];
+
+// const sai = {
+//   firstName: 'sairam',
+//   lastName: 'kaligiri',
+//   age: 2025 - 2000,
+//   job: 'Developer',
+//   friends: ['chaitu', 'sai kumar', 'sathish', 'vinod'],
+// };
+
+
+// console.log(sai.firstName);
+// console.log(sai['firstName']);
+
+// const nameKey = 'Name';
+// console.log(sai['first' + nameKey]);
+// console.log(sai['last' + nameKey]);
+
+// const saiInformation = prompt("Hi Please select following answer about sairam .lastName,age, Profession ,friends,bestFriend");
+
+// if (sai[saiInformation]) {
+//   console.log(`The Answer to the Question is : ` + sai[saiInformation]);
+//   alert(`The Answer to the Question is : ` + sai[saiInformation]);
+// } else {
+//   console.log(`The question is wrong ` + saiInformation);
+//   alert(`The Question is Invalid About Sairam 's ` + saiInformation + `Please select Properly from the following `);
+// }
+
+// //We can add the things with . and [] as below example
+
+// sai.emaiId = 'kaligirisairam@gmail.com';
+// sai['twitterId'] = '@kaligirisairam';
+
+// console.log(`Sai has ${sai.friends.length} friends and his best friend is ${sai.friends[2]}`);
+
+
+//***********************Objects Methods*****************************
+
+const sai = {
+  firstName: 'sairam',
+  lastName: 'kaligiri',
+  birthYear: 2000,
+  job: 'Developer',
+  friends: ['chaitu', 'sai kumar', 'sathish', 'vinod'],
+
+  //Expression - its not a function
+
+  age: function () {
+    return 2015 - this.birthYear;
+  }
+
+};
+
+console.log(sai.);
