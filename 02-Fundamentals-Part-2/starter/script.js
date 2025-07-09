@@ -221,13 +221,61 @@ const sai = {
   birthYear: 2000,
   job: 'Developer',
   friends: ['chaitu', 'sai kumar', 'sathish', 'vinod'],
+  haveDrivingLicense: true,
+
+  //-------------- , ---------------------------  
+  // if we are writing another function or anything we need to add , one after another 
 
   //Expression - its not a function
 
-  age: function () {
-    return 2015 - this.birthYear;
+  // age: function () {
+  //   return 2015 - this.birthYear;
+  // }
+
+  calcAge: function () {
+    this.age = 2025 - this.birthYear;
+    return this.age
+  },   //after one function you need to put comma after that 
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} - years ${this.job} and he has ${this.haveDrivingLicense ? "a" : "no"} Driving license `;
   }
+}
 
-};
+console.log(sai.getSummary());
 
-console.log(sai.);
+
+//----------Excersice - 7 and Challenge 3------------------
+
+const mark = {
+  fullName: 'Mark Miller',
+  mass: 78,
+  height: 1.6,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi
+  }
+}
+
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+
+  calcBMI: function () {
+    this.bmi = this.mass / (this.height * this.height);
+    return this.bmi
+  }
+}
+
+console.log(mark.calcBMI());
+console.log(john.calcBMI());
+
+
+if (mark.calcBMI() < john.calcBMI()) {
+  console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+} else {
+  console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+}
+
