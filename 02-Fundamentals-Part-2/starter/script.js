@@ -215,67 +215,90 @@ console.log(`The Total Amount for the Bills is ` + total);
 
 //***********************Objects Methods*****************************
 
-const sai = {
-  firstName: 'sairam',
-  lastName: 'kaligiri',
-  birthYear: 2000,
-  job: 'Developer',
-  friends: ['chaitu', 'sai kumar', 'sathish', 'vinod'],
-  haveDrivingLicense: true,
+// const sai = {
+//   firstName: 'sairam',
+//   lastName: 'kaligiri',
+//   birthYear: 2000,
+//   job: 'Developer',
+//   friends: ['chaitu', 'sai kumar', 'sathish', 'vinod'],
+//   haveDrivingLicense: true,
 
-  //-------------- , ---------------------------  
-  // if we are writing another function or anything we need to add , one after another 
+//-------------- , ---------------------------  
+// if we are writing another function or anything we need to add , one after another 
 
-  //Expression - its not a function
+//Expression - its not a function
 
-  // age: function () {
-  //   return 2015 - this.birthYear;
-  // }
+// age: function () {
+//   return 2015 - this.birthYear;
+// }
 
-  calcAge: function () {
-    this.age = 2025 - this.birthYear;
-    return this.age
-  },   //after one function you need to put comma after that 
+//   calcAge: function () {
+//     this.age = 2025 - this.birthYear;
+//     return this.age
+//   },   //after one function you need to put comma after that 
 
-  getSummary: function () {
-    return `${this.firstName} is a ${this.calcAge()} - years ${this.job} and he has ${this.haveDrivingLicense ? "a" : "no"} Driving license `;
-  }
+//   getSummary: function () {
+//     return `${this.firstName} is a ${this.calcAge()} - years ${this.job} and he has ${this.haveDrivingLicense ? "a" : "no"} Driving license `;
+//   }
+// }
+
+// console.log(sai.getSummary());
+
+
+// //----------Excersice - 7 and Challenge 3------------------
+
+// const mark = {
+//   fullName: 'Mark Miller',
+//   mass: 78,
+//   height: 1.6,
+
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi
+//   }
+// }
+
+// const john = {
+//   fullName: "John Smith",
+//   mass: 92,
+//   height: 1.95,
+
+//   calcBMI: function () {
+//     this.bmi = this.mass / (this.height * this.height);
+//     return this.bmi
+//   }
+// }
+
+// console.log(mark.calcBMI());
+// console.log(john.calcBMI());
+
+
+// if (mark.calcBMI() < john.calcBMI()) {
+//   console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
+// } else {
+//   console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
+// }
+
+//==========Loops=============================
+for (let count = 1; count <= 10; count++) {
+  console.log(`You will be rewarded with ${count} laptops`)
 }
 
-console.log(sai.getSummary());
+const sai = [
+  'sairam',
+  'kaligiri',
+  2025 - 2000,
+  'Developer',
+  ['chaitu', 'sai kumar', 'sathish', 'vinod']
+];
 
+for (i = 0; i < sai.length; i++) {
 
-//----------Excersice - 7 and Challenge 3------------------
+  //Consoling the data of sai through the loop mode
+  console.log(sai[i], typeof sai[i]);
 
-const mark = {
-  fullName: 'Mark Miller',
-  mass: 78,
-  height: 1.6,
+  types[i] = typeof sai[i];
 
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi
-  }
 }
 
-const john = {
-  fullName: "John Smith",
-  mass: 92,
-  height: 1.95,
-
-  calcBMI: function () {
-    this.bmi = this.mass / (this.height * this.height);
-    return this.bmi
-  }
-}
-
-console.log(mark.calcBMI());
-console.log(john.calcBMI());
-
-
-if (mark.calcBMI() < john.calcBMI()) {
-  console.log(`${john.fullName}'s BMI (${john.calcBMI()}) is higher than ${mark.fullName}'s (${mark.calcBMI()})!`);
-} else {
-  console.log(`${mark.fullName}'s BMI (${mark.calcBMI()}) is higher than ${john.fullName}'s (${john.calcBMI()})!`);
-}
-
+console.log(types[i]);
