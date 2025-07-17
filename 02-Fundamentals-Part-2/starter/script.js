@@ -154,20 +154,20 @@ function clacTip(bill) {
 }
 */
 
-const calcTip = function (bill) {
-  return bill >= 50 || bill <= 300 ? bill * 0.15 : bill * 0.20
-}
+// const calcTip = function (bill) {
+//   return bill >= 50 || bill <= 300 ? bill * 0.15 : bill * 0.20
+// }
 
-const bills = [125, 555, 44];
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const bills = [125, 555, 44];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
-console.log(tips);
+// console.log(tips);
 
-console.log(`The Tips amount for the bill is = ` + calcTip(51));
+// console.log(`The Tips amount for the bill is = ` + calcTip(51));
 
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
 
-console.log(`The Total Amount for the Bills is ` + total);
+// console.log(`The Total Amount for the Bills is ` + total);
 
 //**********************introduction to Objects*****************************
 
@@ -291,14 +291,96 @@ const sai = [
   'Developer',
   ['chaitu', 'sai kumar', 'sathish', 'vinod']
 ];
+// const types = [];
+// const ages = [];
 
-for (i = 0; i < sai.length; i++) {
+// for (let i = 0; i < sai.length; i++) {
 
-  //Consoling the data of sai through the loop mode
-  console.log(sai[i], typeof sai[i]);
+//   //Consoling the data of sai through the loop mode
+//   console.log(sai[i], typeof sai[i]);  //Typeof sai means the string or boolean like that 
 
-  types[i] = typeof sai[i];
+//   types.push(typeof sai[i]);//now these will get stored in types [i]
 
+// }
+// console.log(types);//now we can cosole the values
+
+
+// const years = [1998, 1849, 1383, 1473];
+
+// for (let i = 0; i < years.length; i++) {
+//   ages.push(2025 - years[i]);
+// }
+
+// console.log(ages);
+// console.log(`-------------ONLY STRING------------------`);
+
+// //------------contiunue and break -------------------
+// for (let i = 0; i < sai.length; i++) {
+//   if (typeof sai[i] !== 'String') continue;
+
+//   console.log(sai[i], typeof sai[i]);
+// }
+// //break example
+
+// console.log(`-----------ONLY NUMBER------------------------`);
+
+// for (let i = 0; i < sai.length; i++) {
+//   if (typeof sai[i] !== 'Number') break;
+
+//   console.log(sai[i], typeof sai[i]);
+// }
+
+
+//---------------Backward loop---------------------------
+
+// for (let i = sai.length - 1; i >= 0; i--) {
+//   console.log(sai[i]);
+
+//   for (let i = 1; i <= 9; i++) {
+//     console.log(`You will be rewared with ${i} million rupees`)
+//   }
+// }
+
+//----------While Loop 
+
+// let rep = 1;
+
+// while (rep <= 10) {
+
+//   console.log(`Hi Hello i have drank ${rep} glasses of water`)
+//   rep++;
+
+// }
+
+// let dice = Math.trunc(Math.random() * 6) + 1;
+
+// while (dice !== 6) {
+
+//   console.log(`You rolled ${dice}`);
+//   dice = Math.trunc(Math.random() * 6) + 1;
+
+//   if (dice == 6) {
+//     console.log(`You have rolled ${dice} and now it ends`)
+//   }
+// }
+
+
+//-----The Excersice---------------------
+
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
 }
 
-console.log(types[i]);
+/* Write your code below. Good luck! 🙂 */
+
+const tips = [];
+const totals = [];
+
+const bills = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+
+for (let i = 0; i < bills.length; i++) {
+  tips.push(calcTip(bills[i]));
+  totals.push(tips[i] + bills[i]);
+}
+console.log(tips);
+console.log(totals)
