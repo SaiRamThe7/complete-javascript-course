@@ -54,15 +54,36 @@ console.log("The code starts here ");
 
 const printForecast = function (input) {
   let c = 1;
+  let str = "";
 
+  let array1 = input.temps1;
+  let array2 = input.temps2;
+
+  input = input.temps1.concat(input.temps2);
+
+  console.log(`The array 1 is ${array1} and array 2 is ${array2}`);
   for (let i = 0; i < input.length; i++) {
-    if (input[i] === undefined || typeof input[i] !== "number") {
+    if (
+      input[i] === undefined ||
+      typeof input[i] !== "number" ||
+      input[i] === null
+    ) {
       console.error(`The Temparatures should be only number`);
     }
-    console.log(`...${input[i]}\u00b0C  in ${c} days`);
+    str = str + input[i] + "ºC in " + c + " days ... ";
     c++;
   }
+  return str;
 };
 
-printForecast([17, 21, 23]);
-printForecast([12, 5, -5, 0, "ahdj"]);
+var temps1 = [17, 21, 23];
+var temps2 = [12, 5, -5, 0, 4];
+
+const mess = printForecast({ temps1, temps2 }); //Sending Two arrays data to a function
+console.log(mess);
+
+//const mess2 = printForecast(temps2);
+//console.log(mess2);
+
+//printForecast([17, 21, 23]);
+//printForecast([12, 5, -5, 0, "ahdj"]);
