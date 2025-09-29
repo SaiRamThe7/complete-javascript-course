@@ -19,7 +19,7 @@ let highscore = 0;
 // };
 
 const displayMessage = function (message) {
-  document.querySelector('.message').textContent = message;
+  document.querySelecto r('.message').textContent = message;
 };
 
 document.querySelector('.check').addEventListener('click', function () {
@@ -75,20 +75,17 @@ Implement a game rest functionality, so that the player can make a new guess! He
 GOOD LUCK 😀
 */
 
-document.querySelector('.again').addEventListener('click' ,function(){
+document.querySelector('.again').addEventListener('click', function () {
+  //alert("clicked on again");
+  //let secretNumber = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  document.querySelector('.score').textContent = score;
+  document.querySelector('.number').textContent = '?';
+  document.querySelector('.guess').value = '';
+  document.querySelector('.highscore').textContent = 0;
+  document.querySelector('body').style.backgroundColor = '#222';
+  document.querySelector('.number').style.width = '15rem';
+  displayMessage('Start guessing !');
 
-
-    //alert("clicked on again");
-    //let secretNumber = Math.trunc(Math.random() * 20) + 1;
-    score = 20;
-    document.querySelector('.score').textContent = score ;
-    document.querySelector('.number').textContent = "?" ;
-    document.querySelector('.guess').value = "" ;
-    document.querySelector('.highscore').textContent = 0;
-    document.querySelector('body').style.backgroundColor = '#222';
-    document.querySelector('.number').style.width = '15rem';
-    displayMessage("Start guessing !! Biatch");
-
-    console.log(secretNumber);
-
+  console.log(secretNumber);
 });
