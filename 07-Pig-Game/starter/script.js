@@ -14,9 +14,9 @@ playerScore0.textContent = 0;
 playerScore1.textContent = 0;
 diceIMG.classList.add('hidden');
 //console.log(number);
-let scoreboard = 0
+let scoreboard = 0;
 
-//clicking on roll dice function 
+//clicking on roll dice function
 rolldice.addEventListener('click', function () {
   let numbers = number();
   console.log(numbers);
@@ -28,11 +28,17 @@ rolldice.addEventListener('click', function () {
   diceIMG.src = `dice-${numbers}.png`;
 
   //score need to be shown for the player
-if(numbers != '0'){
+  if (numbers != '0') {
     scoreboard += numbers;
     score0.textContent = scoreboard;
-}
-else {
-    
-}
+  } else {
+    scoreboard = 0;
+    scoreboard += numbers;
+    score1.textContent = scoreboard;
+  }
 });
+
+//Hold button functionality
+
+const hold = document.querySelector('.btn--hold');
+hold.addEventListener('click', function () {});
