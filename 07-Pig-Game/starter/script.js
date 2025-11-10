@@ -38,7 +38,7 @@ rolldice.addEventListener('click', function () {
   }
 });
 
-//Hold button functionality
 
+//Hold button functionality
 const hold = document.querySelector('.btn--hold');
 hold.addEventListener('click', function () {});
