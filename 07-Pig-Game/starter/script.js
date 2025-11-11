@@ -13,12 +13,14 @@ const playerScore0 = document.getElementById('score--0');
 const playerScore1 = document.getElementById('score--1');
 const diceIMG = document.querySelector('.dice');
 const newgame = document.querySelector('.btn--new');
+
 let scoreboard = 0;
 let playing = true;
 const scores = [0, 0];
 let currentScore = 0;
 var activePlayer = 0;
 
+//.switching player function
 const SwitchPlayer = function () {
   document.getElementById(`current--${activePlayer}`).textContent = 0;
   activePlayer = activePlayer === 0 ? 1 : 0; //here i have used let again for the same variable and its giving syntax error
@@ -27,6 +29,7 @@ const SwitchPlayer = function () {
   player1.classList.toggle('player--active');
 };
 
+//Generating a random number function
 const number = function () {
   return Math.trunc(Math.random() * 6) + 1;
 };
@@ -35,7 +38,6 @@ const rolldice = document.querySelector('.btn--roll');
 playerScore0.textContent = 0;
 playerScore1.textContent = 0;
 diceIMG.classList.add('hidden');
-//console.log(number);
 
 //clicking on roll dice function
 rolldice.addEventListener('click', function () {
