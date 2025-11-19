@@ -1,14 +1,13 @@
 'use strict';
-const myname = 'sai';
+const Amitab = {
+  firstName: 'Amitab',
+  lastName: 'tiwari',
+  age: 33,
+};
 
-function greet() {
-  console.log(`Hello, ${myname}! Welcome to the behind-the-scenes tutorial.`);
-}
+const marriedAmitab = Amitab;
 
-console.log(x);
-console.log(y);
-console.log(z);
+marriedAmitab.lastName = 'bachan';
 
-let x = 10;
-var y = 20;
-const z = 30;
+console.log('Before marriage:', Amitab);
+console.log('After marriage:', marriedAmitab);
