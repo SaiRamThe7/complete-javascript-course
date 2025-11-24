@@ -44,3 +44,6 @@ sairamcopy.family.push('vishnu');
 
 console.log('original :', sairamoriginal);
 console.log('copy :', sairamcopy);
+
+console.log(sairamoriginal === sairamcopy); //false
+console.log(sairamoriginal.family === sairamcopy.family); //false
