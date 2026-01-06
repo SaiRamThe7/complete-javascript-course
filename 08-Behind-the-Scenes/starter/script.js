@@ -23,6 +23,7 @@ const sairam = {
   family: ['shanmugam', 'shalini'],
 };
 
+//spread operator to create shallow clone
 const marriedsairam = { ...sairam };
 
 marriedsairam.lastName = 'kumar';
@@ -37,6 +38,7 @@ const sairamoriginal = {
   family: ['shanmugam', 'shalini'],
 };
 
+//structured clone for deep clone --it will clone even nested objects and arrays
 const sairamcopy = structuredClone(sairamoriginal);
 
 sairamcopy.family.push('lakshmi');
@@ -45,5 +47,14 @@ sairamcopy.family.push('vishnu');
 console.log('original :', sairamoriginal);
 console.log('copy :', sairamcopy);
 
-console.log(sairamoriginal === sairamcopy); //false
-console.log(sairamoriginal.family === sairamcopy.family); //false
+//---Notes Regarding Shallow Clone vs Deep Clone---
+
+// Cloning is the process of creating a duplicate of an existing object or data structure. The primary difference between shallow and deep cloning lies in how they handle nested objects or internal references.
+
+// Quick Comparison
+
+// Feature 	Shallow Clone	                                                  Deep Clone
+// Depth	Copies only the top-level structure.	                              Recursively copies all levels.
+// References	Shares references to nested objects.	                        Creates new instances for all nested objects.
+// Independence	Not fully independent; changes to nested data affect both.	Entirely independent; changes in one do not affect the other.
+// Performance	Faster and uses less memory.	                                Slower and memory-intensive for large data.

@@ -27,3 +27,9 @@ const restaurant = {
     },
   },
 };
+
+console.log(
+  restaurant.openingHours.thu.open,
+  restaurant.openingHours.fri.open,
+  restaurant.openingHours.sat.open
+);
