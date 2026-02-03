@@ -28,6 +28,10 @@ const restaurant = {
   },
 };
 
+const { name: restaurantName = [] } = restaurant;
+
+console.log(restaurantName);
+
 console.log(
   restaurant.openingHours.thu.open,
   restaurant.openingHours.fri.open,
@@ -261,10 +265,7 @@ const books = [
   },
 ];
 
-const nameOftheBooks = books.map(function (book) {
-  return book.title, book.author;
-});
-
-console.log(nameOftheBooks);
+// console.log(nameOftheBooks);
 
 //Destructuring
+//The Spread Operator(...)
