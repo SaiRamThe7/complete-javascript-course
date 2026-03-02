@@ -35,11 +35,11 @@ console.log(restaurantName);
 console.log(
   restaurant.openingHours.thu.open,
   restaurant.openingHours.fri.open,
-  restaurant.openingHours.sat.open
+  restaurant.openingHours.sat.open,
 );
 
 //Assignemnet work
-
+/*
 const books = [
   {
     title: 'Algorithms',
@@ -264,6 +264,9 @@ const books = [
     highlighted: true,
   },
 ];
+
+
+*/
 
 // console.log(nameOftheBooks);
 
