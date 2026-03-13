@@ -226,6 +226,10 @@ console.log(friends);
 friends.shift(); // First
 console.log(friends);
 
+
+-----until here its completed
+
+
 console.log(friends.indexOf('Steven'));
 console.log(friends.indexOf('Bob'));
 
@@ -303,9 +307,7 @@ console.log(jonas);
 console.log(jonas.lastName);
 console.log(jonas['lastName']);
 
-const nameKey = 'Name';
-console.log(jonas['first' + nameKey]);
-console.log(jonas['last' + nameKey]);
+
 
 // console.log(jonas.'last' + nameKey)
 
